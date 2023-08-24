@@ -119,24 +119,20 @@ function emptyCart() {
     item[i].quantity = 0;
   }
   cartEmpty = [];
-  //an array that has no elements - 1 line or so
+  //an array that has no elements 
 }
 
+let totalPaid = 0;
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
 */
-function pay() {
+function pay(amount) {
   //use the cartTotal function and compare that. (amount)
-  //Trying to call/hoist the cartTotal function to this function - is that correct?
-  //How i account for the cash received?
-  //The tutorials i've seen online never go as far to return a value or not using vanilla JS.
-  //(ignore)let cashReceived = document.getElementsByClassName("received")[0];
-  let amount = cashReceived;
-  if (cartTotal - amount > 0) {
-    return "$" + amount;
-  } else if (cartTotal - amount < 0) {
-    return "-$" + amount;
+  if (cartTotal - totalPaid > 0) {
+    return amount;
+  } else if (cartTotal - totalPaid < 0) {
+    return amount;
   }
 }
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
