@@ -128,14 +128,17 @@ function emptyCart() {
 */
 function pay() {
   //use the cartTotal function and compare that. (amount)
-  amount = document.getElementsByClassName('received')[0];
-  if (cartTotal - amount < 0) {
-    console.log("$")
-  } else if (cartTotal - amount > 0) {
-    console.log("-$")
+  //Trying to call/hoist the cartTotal function to this function - is that correct?
+  //How i account for the cash received?
+  //The tutorials i've seen online never go as far to return a value or not using vanilla JS.
+  //(ignore)let cashReceived = document.getElementsByClassName("received")[0];
+  let amount = cashReceived;
+  if (cartTotal - amount > 0) {
+    return "$" + amount;
+  } else if (cartTotal - amount < 0) {
+    return "-$" + amount;
   }
 }
-
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
 
