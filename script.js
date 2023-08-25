@@ -10,21 +10,21 @@
 */
 const products = [
   {name: "Strawberries",
-    price: .75,
+    price: 2,
     quantity: 0,
     productId: 0,
    image: "images/strawberry.jpg"
 },
   {
     name: "Oranges",
-    price: .99,
+    price: 5,
     quantity: 0,
     productId: 1,
     image: "images/orange.jpg"
   },
   {
     name: "Cherries",
-    price: .29,
+    price: 1,
     quantity: 0,
     productId: 2,
     image: "images/cherry.jpg"
@@ -102,7 +102,7 @@ function removeProductFromCart(id) {
   - cartTotal should iterate through the cart to get the total of all products
   - cartTotal should return the sum of the products in the cart
 */
-const cartTotal = function() {
+let cartTotal = function() {
   let total = 0;
   for (let i = 0; i < cart.length; i++){
     console.log(cart[i]);
@@ -119,7 +119,7 @@ function emptyCart() {
     item[i].quantity = 0;
   }
   cartEmpty = [];
-  //an array that has no elements 
+  //an array that has no elements - 1 line or so
 }
 
 let totalPaid = 0;
@@ -129,9 +129,9 @@ let totalPaid = 0;
 */
 function pay(amount) {
   //use the cartTotal function and compare that. (amount)
-  if (cartTotal - totalPaid > 0) {
+  if (cartTotal - totalPaid >= 0) {
     return amount;
-  } else if (cartTotal - totalPaid < 0) {
+  } else {
     return amount;
   }
 }
