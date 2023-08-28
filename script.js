@@ -122,6 +122,7 @@ function emptyCart() {
   //an array that has no elements - 1 line or so
 }
 
+//Is this to cartTotal() + something???
 let totalPaid = 0;
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
