@@ -131,14 +131,16 @@ let totalPaid = 0;
 function pay(amount) {
   //use the cartTotal function and compare that. (amount)
   //function works, but got to get the calculations to work
-  //Where does the totalPaid var come into play?
   //Step 1: Calculate the remaining amount by subtracting amount from cartTotal
-  //Step 2: If remaining balance is below 0, make it return a negative number???
+  //Step 2: If remaining balance is below 0, make it return a negative number
+    //Working
   //Step 3: If remaining balance is above 0, make it return the excess to customer
-  if ((cartTotal - amount === totalPaid) && totalPaid < 0) {
-    return cartTotal(amount);
-  } else{
-    return cartTotal(amount);
+    //Gotta figure out how to have it receive more money and spit it out.
+  if (cartTotal() - amount > 0) {
+    totalPaid += amount;
+    return totalPaid - cartTotal();
+  } else {
+    return amount - cartTotal();
   }
 }
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
