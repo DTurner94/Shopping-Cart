@@ -81,8 +81,8 @@ function decreaseQuantity(id) {
     console.log(cart)
   }
   if (item.quantity === 0) {
-    cart.pop(item);
-    //console.log(cart.item);
+   const productIndex = cart.indexOf(item.productId, 0);
+    cart.splice(productIndex, 1);
 }
 }
 
@@ -94,8 +94,8 @@ function decreaseQuantity(id) {
 function removeProductFromCart(id) {
   const item = products.find((product) => product.productId === id);
   item.quantity = 0;
-  cart.pop(item);
-  
+  const productIndex = cart.indexOf(item.productId, 0);
+    cart.splice(productIndex, 1);
 }
 
 /* Create a function named cartTotal that has no parameters
